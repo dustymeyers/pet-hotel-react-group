@@ -15,7 +15,7 @@ def get_all_pets():
       """
       dbname=pet-hotel
       host=localhost
-      user=patricknelson
+      user=joshgulledge
       port=5432
       """
     )
