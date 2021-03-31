@@ -8,7 +8,8 @@ create table "pets" (
 	"id" SERIAL PRIMARY KEY,
 	"name" VARCHAR (256),
 	"breed" VARCHAR (256),
-	"is_checked_in" boolean NOT NULL DEFAULT False,
+  "color" VARCHAR (100),
+	"is_checked_in" boolean NOT NULL DEFAULT True,
 	"owner_id" int REFERENCES "owners" ON DELETE CASCADE NOT NULL 
 );
 
