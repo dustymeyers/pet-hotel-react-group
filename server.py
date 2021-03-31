@@ -242,6 +242,44 @@ def delete_owner(id):
       conn.close()
       print("PostgreSQL connection is closed")
 
+### PUT Routes ###
+
+# Pet Check In Status Update
+@app.route('/api/pets/update/<int:id>', methods=['PUT'])
+def update_pet(id):
+  update_check_in = request.json['update_check_in']
+  print('id', id)
+  try:
+    conn = psycopg2.connect(
+      """
+      dbname=pet-hotel
+      host=localhost
+      user=patricknelson
+      port=5432
+      """
+    )
+    cur = conn.cursor()
+    update_query = 'UPDATE pets SET is_checked_in = %s WHERE id = %s;'
+    cur.execute(update_query, (update_check_in, id))
+    conn.commit()
+    count = cur.rowcount
+    print('Number of updates:', count)
+    result = {'status': 'UPDATED'}
+    return make_response(jsonify(result), 200)
+  except (Exception, psycopg2.Error) as error:
+    # there was a problem
+    if(conn):
+      print("Failed to update pet", error)
+      # respond with error
+      result = {'status': 'ERROR'}
+      return make_response(jsonify(result), 500)
+  finally:
+    # closing database connection.
+    if(conn):
+      # clean up our connections
+      cur.close()
+      conn.close()
+      print("PostgreSQL connection is closed")
 
   # If we're running in stand alone mode, run the application
 if __name__ == '__main__':
