@@ -23,7 +23,12 @@ def get_all_pets():
   # try:
     # params = config()
   # Execute a query
-  cur.execute('SELECT * FROM "pets"')
+  cur.execute("""
+  SELECT "pets".*, "owners".first_name, "owners".last_name FROM "pets"
+  JOIN "owners" ON "pets".owner_id = "owners".id
+  GROUP BY "owners".id, "pets".id
+  ORDER BY "pets".id;
+  """)
   # Retrieve query results
   pets = cur.fetchall()
   print("The number of pets: ", cur.rowcount)
