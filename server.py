@@ -8,31 +8,32 @@ app = Flask(__name__)
 conn = psycopg2.connect(
   # Change this info to fit your DB
   """
-  dbname=
+  dbname=pet-hotel
   host=localhost
   user=patricknelson
   port=5432
   """
-) 
+)
 
 cur = conn.cursor()
 
-@app.route('/allconsoles', methods=['GET'])
-def get_all_consoles():
+@app.route('/allpets', methods=['GET'])
+def get_all_pets():
   # conn = None
   # try:
     # params = config()
   # Execute a query
-  cur.execute('SELECT * FROM "consoles"')
+  cur.execute('SELECT * FROM "pets"')
   # Retrieve query results
-  records = cur.fetchall()
-  print("The number of consoles: ", cur.rowcount)
-  for row in records:
+  pets = cur.fetchall()
+  print("The number of pets: ", cur.rowcount)
+  for row in pets:
     print(row)
-  return jsonify({'consoles': records})
+  # returns all pets as an array of arrays
+  return jsonify(pets)
   cur.close()
 
   # If we're running in stand alone mode, run the application
 if __name__ == '__main__':
     app.run(debug=True)
-    get_all_consoles()
+    get_all_pets()
