@@ -53,7 +53,7 @@ def get_all_owners():
       """
       dbname=pet-hotel
       host=localhost
-      user=patricknelson
+      user=joshgulledge
       port=5432
       """
     )
@@ -96,7 +96,7 @@ def add_new_owner():
       """
       dbname=pet-hotel
       host=localhost
-      user=patricknelson
+      user=joshgulledge
       port=5432
       """
     )
@@ -140,7 +140,7 @@ def add_new_pet():
       """
       dbname=pet-hotel
       host=localhost
-      user=patricknelson
+      user=joshgulledge
       port=5432
       """
     )
@@ -180,7 +180,7 @@ def delete_pet(id):
       """
       dbname=pet-hotel
       host=localhost
-      user=patricknelson
+      user=joshgulledge
       port=5432
       """
     )
@@ -215,7 +215,7 @@ def delete_owner(id):
       """
       dbname=pet-hotel
       host=localhost
-      user=patricknelson
+      user=joshgulledge
       port=5432
       """
     )
@@ -254,7 +254,7 @@ def update_pet(id):
       """
       dbname=pet-hotel
       host=localhost
-      user=patricknelson
+      user=joshgulledge
       port=5432
       """
     )
