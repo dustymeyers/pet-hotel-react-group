@@ -4,7 +4,7 @@
 
 _Duration: 1 Day Sprint_
 
-Given 48 hours to learn enough about the software language, Python. Students were put into groups and charge with putting together a RESTful api server that communicates between a database and clientside browser page. The files included in this GitHub repository are specific to the server and database for this project. A link to the clientside repository can be found [here](https://github.com/dustymeyers/pet_hotel_client).
+Given 48 hours to learn enough about the software language, Python. Students were put into groups and charge with putting together a RESTful api server that communicates between a database and client side browser page. The files included in this GitHub repository are specific to the server and database for this project. A link to the client side repository can be found [here](https://github.com/dustymeyers/pet_hotel_client).
 
 The Pet Hotel app has two major views, a `pet owners manager` view and a `dashboard` view. On the pet owners view, pet owners can be added to the database by form entry. All owners in the database are displayed on this page as well as the number of pets that are assigned to the owner. Pets can be added in the dashboard view including their name, breed, color, and their owner. By default, all pets are considered checked in. Pets and owners both can be deleted. This version does not include the full pet table view for the dashboard page, but the API route has been setup for easy setup in future versions.
 
@@ -24,7 +24,7 @@ The Pet Hotel app has two major views, a `pet owners manager` view and a `dashbo
 6. Run `pip3 install psycopg2-binary` in your terminal.
 7. Run `export FLASK_APP=server.py` in your terminal.
 8. Run `flask run` in your terminal to boot up the server.
-9. For clientside installation view the clientside repostiory [here](https://github.com/dustymeyers/pet_hotel_client).
+9. For client side installation view the client side repostiory [here](https://github.com/dustymeyers/pet_hotel_client).
 
 ## Usage
 1. As a user, I can add owners to the database that are registering at the hotel.
