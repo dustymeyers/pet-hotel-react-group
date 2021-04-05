@@ -19,7 +19,7 @@ The Pet Hotel app has two major views, a `pet owners manager` view and a `dashbo
 1. Create a database named `pet-hotel`,
 2. The queries in the `database.sql` file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on [Postgres](https://www.postgresql.org/download/), so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries.
 3. Open your editor of choice and run `python3 -m venv venv`.
-4. Run `venv/bin/activate` in your terminal.
+4. Run `. venv/bin/activate` in your terminal.
 5. Run `pip3 install Flask` in your terminal.
 6. Run `pip3 install psycopg2-binary` in your terminal.
 7. Run `export FLASK_APP=server.py` in your terminal.
@@ -33,7 +33,7 @@ The Pet Hotel app has two major views, a `pet owners manager` view and a `dashbo
 4. As a user, I can see how many pets each owner has at the hotel.
 
 ## Built With
-This serverside application was built with Python, Flask, SQL, and psycopg2.
+This server side application was built with Python, Flask, SQL, and psycopg2.
 
 ## Acknowledgement
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. And a special thanks to Zack Werner, Patrick Nelson, and Josh Gulledge for being outstanding teammates.
